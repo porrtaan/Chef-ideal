@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts using Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/login.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons/css/all/all.css" rel="stylesheet">
+
+
+
+    <!-- Title -->
+    <title>Sign In</title>
+</head>
+<body>
+    <!-- Main container -->
+    <main class="container d-flex justify-content-center align-items-center vh-100">
+
+        
+        <!-- Card for Sign-In Form -->
+        <div class="card shadow-lg p-4 rounded-3" style="max-width: 450px; width: 100%;">
+            <a href="../karma-master/index.html"><i class="fi fi-rr-arrow-left"></i></i></a>
+            <h3 class="text-center mb-3">login</h3>
+            <p class="text-muted mb-2 text-center">Junta-se a nós</p>
+
+            <!-- Start Form -->
+            <form method="post" action="login.php">
+                <!-- Email Input -->
+                <div class="form-group mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email" name="email">
+                </div> <!-- End Email Input -->
+
+                <!-- Password Input -->
+                <div class="form-group mb-3 position-relative">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password" name="pass">
+                    <span class="toggle-password position-absolute end-0 me-2 mt-2" style="cursor: pointer;" onclick="togglePassword('exampleInputPassword1', this)">
+                        <i class="bi bi-eye-slash-fill" data-toggle="hidden"></i>
+                    </span>
+                </div> <!-- End Password Input -->
+                
+                <br><br>
+
+                <!-- Sign In Submit Button -->
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form> <!-- End Form -->
+
+           
+            <!-- Create Account Link -->
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-secondary w-100" data-bs-toggle="modal" data-bs-target="#signUpModal">Registar</button>
+            </div> <!-- End Create Account Link -->
+        </div> <!-- End Card for Sign-In Form -->
+    </div> <!-- End Card for Sign-In Form -->
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <!-- Modal Dialog -->
+        <div class="modal-dialog modal-dialog-centered">
+            <!-- Modal Content -->
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <!-- Sign Up Title -->
+                    <h5 class="modal-title" id="signUpModalLabel">Registar</h5>
+                    <!-- Close Button -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div> <!-- End Modal Header -->
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <!-- Start Form -->
+                    <form method="post" action="registar.php">
+                        <!-- Sign Up Input Email -->
+                        <div class="mb-3">
+                            <label for="signUpEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="signUpEmail" placeholder="Enter your email" required name="email">
+                        </div> <!-- End Sign Up Input Email -->
+
+                       
+                        <div class="mb-3 position-relative">
+                            <label for="signUpConfirmPassword" class="form-label">NIF</label>
+                            <input type="text" class="form-control" id="signUpConfirmPassword" placeholder="NIF" required name="nif">
+                        </div>
+
+                        <!-- Sign Up Confirm Password -->
+                        <div class="mb-3 position-relative">
+                            <label for="signUpConfirmPassword" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="signUpConfirmPassword" placeholder="Nome" required name="nome">
+                            
+                        </div> <!-- End Sign Up Confirm Password -->
+                        <!-- Sign Up Confirm Password -->
+                        <div class="mb-3 position-relative">
+                            <label for="signUpConfirmPassword" class="form-label">Telefone</label>
+                            <input type="text" class="form-control" id="signUpConfirmPassword" placeholder="Telefone" required name="telefone">
+                        </div> <!-- End Sign Up Confirm Password -->
+                        
+                         <!-- Sign Up Input Password -->
+                         <div class="mb-3 position-relative">
+                            <label for="signUpPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signUpPassword" placeholder="Password" required name="pass">
+                            <span class="toggle-password position-absolute end-0 me-2 mt-2" style="cursor: pointer;" onclick="togglePassword('signUpPassword', this)">
+                                <i class="bi bi-eye-slash-fill" data-toggle="hidden"></i>
+                            </span>
+                        </div> <!-- End Sign Up Input Password -->
+
+                        <!-- Sign Up Confirm Password -->
+                        <div class="mb-3 position-relative">
+                            <label for="signUpConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="signUpConfirmPassword" placeholder="Confirme a password" required>
+                            <span class="toggle-password position-absolute end-0 me-2 mt-2" style="cursor: pointer;" onclick="togglePassword('signUpConfirmPassword', this)">
+                                <i class="bi bi-eye-slash-fill" data-toggle="hidden"></i>
+                            </span>
+                        </div> <!-- End Sign Up Confirm Password -->
+
+
+                        <!-- Sign Up Submit Button -->
+                        <button type="submit" class="btn btn-primary w-100">Criar conta</button>
+                    </form> <!-- End Form -->
+
+                </div> <!-- End Modal Body -->
+            </div> <!-- End Modal Content -->
+        </div> <!-- End Modal Dialog -->
+    </main> <!-- End Main container -->
+
+    <!-- Footer Section -->
+    <footer class="bg-secondary text-center py-3 mt-4">
+        <div class="container">
+            <p class="mb-2 dark">&copy; AFZ 2024</p> <!-- COPYRIGHT -->
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item"><a href="README.md" class="text-decoration-none">About</a></li>
+                <li class="list-inline-item"><a href="#" class="text-decoration-none">License</a></li>
+                <li class="list-inline-item"><a href="#" class="text-decoration-none">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="#" class="text-decoration-none">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer> <!-- End Footer Section -->
+
+    <script src="js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
